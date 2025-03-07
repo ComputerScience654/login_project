@@ -28,7 +28,7 @@
 ### ส่วนหน้าระบบ (Frontend)
 	HTML, CSS, JavaScript
 ### ส่วนหลังระบบ (Backend)
-	Python (Flask หรือ Django)
+	Python, php (Flask หรือ Django)
 ### ฐานข้อมูล (Database)
 	MySQL
 
