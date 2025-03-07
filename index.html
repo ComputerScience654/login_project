@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" id="toggle-password">Show</button>
+            </div>
+            <div class="input-container">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript สำหรับเปิด/ปิดการมองเห็นรหัสผ่าน
+        const togglePasswordButton = document.getElementById("toggle-password");
+        const passwordField = document.getElementById("password");
+
+        togglePasswordButton.addEventListener("click", function() {
+            // เช็คสถานะการแสดง/ซ่อนรหัส
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                togglePasswordButton.textContent = "Hide"; // เปลี่ยนปุ่มเป็น "Hide"
+            } else {
+                passwordField.type = "password";
+                togglePasswordButton.textContent = "Show"; // เปลี่ยนปุ่มเป็น "Show"
+            }
+        });
+    </script>
+</body>
+</html>
